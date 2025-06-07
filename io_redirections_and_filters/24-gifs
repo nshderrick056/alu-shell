@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -printf "%f\n" | while read f; do [ "${f##*.}" != "gif" ] || printf "%s\n" "${f%.*}"; done | sort -f
+find . -type f -iname "*.gif" | rev | cut -d'/' -f1 | rev | while read f; do echo "${f%.gif}"; done | sort -f
