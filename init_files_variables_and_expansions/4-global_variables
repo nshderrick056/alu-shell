@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "HBTN=89" | { read line; eval "$line"; echo "HBTN=$HBTN"; }
+export HBTN=89 | echo "HBTN=$HBTN"
