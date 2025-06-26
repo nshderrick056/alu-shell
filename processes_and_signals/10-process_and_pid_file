@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #Add 10-process_and_pid_file script with signal handling and PID file
 PID_FILE="/var/run/myscript.pid"
 
