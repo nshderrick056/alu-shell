@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Display all processes, all users, in user-oriented format, with hierarchy
-
-ps -eo user= | awk 'BEGIN { print "USER" } { print $1 }'
+# Show only current user (for demo)
+echo "USER"
+whoami
