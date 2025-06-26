@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Kill the process named '7-highlander'
-if pkill -f "./7-highlander" > /dev/null 2>&1; then
-    echo "OK"
+# Find the PID of the 7-highlander script
+pid=$(pgrep -f "./7-highlander")
+
+# Kill the process if found
+if [ -n "$pid" ]; then
+  kill "$pid"
 fi
+
