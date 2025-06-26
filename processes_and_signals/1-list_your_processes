@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # Display all processes, all users, in user-oriented format, with hierarchy
 
-ps -eo user,lstart,cmd --sort=lstart | awk 'NR==1{$2="STARTED"; print $1, $2, $NF; next} {printf "%-8s %02d:%02d:%02d %s\n", $1, $4, $5, $6, substr($0, index($0,$7))}'
+echo "USER"
+ps -eo user --no-headers | sort | uniq
+
