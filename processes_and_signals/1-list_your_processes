@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Display all processes, all users, in user-oriented format, with hierarchy
 
-echo "USER"
-ps -eo user --no-headers | sort | uniq
-
+ps -eo user= | awk 'BEGIN { print "USER" } { print $1 }'
