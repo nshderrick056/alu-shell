@@ -4,7 +4,7 @@ pid=$(pgrep -f "./7-highlander")
 
 # Kill the process if found
 if [ -n "$pid" ]; then
-  kill "$pid"
+  kill -9 "$pid"
 fi
 
 
